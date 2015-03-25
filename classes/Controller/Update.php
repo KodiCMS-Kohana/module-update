@@ -34,38 +34,4 @@ class Controller_Update extends Controller_System_Backend {
 			'actions' => Update::check_database(FALSE),
 		));
 	}
-	
-	public function action_patches()
-	{
-		if ($this->request->method() === Request::POST)
-		{
-			return $this->_apply_patch();
-		}
-
-		$this->set_title(__('Patches'));
-
-		$this->template->content = View::factory( 'update/patches', array(
-			'patches' => array_flip(Patch::find_all()),
-		));
-	}
-	
-	private function _apply_patch()
-	{
-		$patch = $this->request->post('patch');
-		
-		try
-		{
-			Patch::apply($patch);
-		} 
-		catch (Validation_Exception $ex)
-		{
-			Messages::errors($ex->errors());
-		}
-		catch (Kohana_Exception $ex) 
-		{
-			Messages::errors($ex->getMessage());
-		}
-		
-		$this->go_back();
-	}
 }

@@ -21,13 +21,6 @@ return array(
 						'permissions' => 'update.database',
 						'priority' => 410,
 						'icon' => 'database',
-					),
-					array(
-						'name' => 'Patches',
-						'url' => Route::get('backend')->uri(array('controller' => 'update', 'action' => 'patches')),
-						'permissions' => 'update.patches',
-						'priority' => 410,
-						'icon' => 'file-code-o'
 					)
 				)
 			)
