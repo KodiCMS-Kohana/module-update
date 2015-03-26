@@ -21,8 +21,8 @@
 			<?php echo UI::icon('lightbulb-o fa-lg'); ?> 
 			<?php echo __('When you replace the files in the :cms_name do not forget to set permissions on folders `:cache_folder` and `:logs_folder`, and save the changes made ​​to the :cms_name core', array(
 				':cms_name' => CMS_NAME,
-				':cache_folder' => 'cms/cache',
-				':logs_folder' => 'cms/logs'
+				':cache_folder' => 'cms/storage/cache',
+				':logs_folder' => 'cms/storage/logs'
 			)); ?>
 		</div>
 		
