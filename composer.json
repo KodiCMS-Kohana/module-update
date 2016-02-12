@@ -1,5 +1,5 @@
 {
-	"name":        "kodicms/update",
+	"name":        "kodicms_kohana/update",
 	"type":        "kodicms-module",
 	"description": "The official KodiCMS update module",
 	"homepage":    "http://www.kodicms.ru/",
